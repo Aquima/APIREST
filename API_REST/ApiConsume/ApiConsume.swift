@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 struct Constants {
     static let API_KEY = "rKQnkLorXoqiEd49yMejQek6wUPn"
-    static let API_URL = "http://cajaarequipa.azurewebsites.net/wcfcaja.svc/"
+    static let API_URL = "http://172.29.57.195:9080/"
 }
 struct HTTP_METHOD {
     static let POST = "POST"
@@ -34,7 +34,7 @@ class ApiConsume: NSObject{
     }()
     
     //MARK: Local Variable
-    var currentUser:User!
+
     var emptyStringArray : [String]? = nil
     var configuration:URLSessionConfiguration!
     //MARK: Init
