@@ -15,6 +15,12 @@
 		F012EE771F9A5C5B001CDFA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F012EE751F9A5C5B001CDFA1 /* LaunchScreen.storyboard */; };
 		F012EE821F9A5C5B001CDFA1 /* API_RESTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012EE811F9A5C5B001CDFA1 /* API_RESTTests.swift */; };
 		F012EE8D1F9A5C5B001CDFA1 /* API_RESTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012EE8C1F9A5C5B001CDFA1 /* API_RESTUITests.swift */; };
+		F012EE9D1F9A5C7D001CDFA1 /* ApiConsume.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012EE9B1F9A5C7D001CDFA1 /* ApiConsume.swift */; };
+		F012EE9E1F9A5C7D001CDFA1 /* ApiConsume.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012EE9B1F9A5C7D001CDFA1 /* ApiConsume.swift */; };
+		F012EE9F1F9A5C7D001CDFA1 /* ApiConsume.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012EE9B1F9A5C7D001CDFA1 /* ApiConsume.swift */; };
+		F012EEA01F9A5C7D001CDFA1 /* ApiConsumeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012EE9C1F9A5C7D001CDFA1 /* ApiConsumeExtensions.swift */; };
+		F012EEA11F9A5C7D001CDFA1 /* ApiConsumeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012EE9C1F9A5C7D001CDFA1 /* ApiConsumeExtensions.swift */; };
+		F012EEA21F9A5C7D001CDFA1 /* ApiConsumeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012EE9C1F9A5C7D001CDFA1 /* ApiConsumeExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,8 @@
 		F012EE881F9A5C5B001CDFA1 /* API_RESTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = API_RESTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F012EE8C1F9A5C5B001CDFA1 /* API_RESTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_RESTUITests.swift; sourceTree = "<group>"; };
 		F012EE8E1F9A5C5B001CDFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F012EE9B1F9A5C7D001CDFA1 /* ApiConsume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConsume.swift; sourceTree = "<group>"; };
+		F012EE9C1F9A5C7D001CDFA1 /* ApiConsumeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConsumeExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,7 @@
 		F012EE681F9A5C5B001CDFA1 /* API_REST */ = {
 			isa = PBXGroup;
 			children = (
+				F012EE9A1F9A5C7D001CDFA1 /* ApiConsume */,
 				F012EE691F9A5C5B001CDFA1 /* AppDelegate.swift */,
 				F012EE6B1F9A5C5B001CDFA1 /* ViewController.swift */,
 				F012EE6D1F9A5C5B001CDFA1 /* Main.storyboard */,
@@ -126,6 +135,15 @@
 				F012EE8E1F9A5C5B001CDFA1 /* Info.plist */,
 			);
 			path = API_RESTUITests;
+			sourceTree = "<group>";
+		};
+		F012EE9A1F9A5C7D001CDFA1 /* ApiConsume */ = {
+			isa = PBXGroup;
+			children = (
+				F012EE9B1F9A5C7D001CDFA1 /* ApiConsume.swift */,
+				F012EE9C1F9A5C7D001CDFA1 /* ApiConsumeExtensions.swift */,
+			);
+			path = ApiConsume;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F012EEA01F9A5C7D001CDFA1 /* ApiConsumeExtensions.swift in Sources */,
 				F012EE6C1F9A5C5B001CDFA1 /* ViewController.swift in Sources */,
 				F012EE6A1F9A5C5B001CDFA1 /* AppDelegate.swift in Sources */,
 				F012EE721F9A5C5B001CDFA1 /* API_REST.xcdatamodeld in Sources */,
+				F012EE9D1F9A5C7D001CDFA1 /* ApiConsume.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F012EE821F9A5C5B001CDFA1 /* API_RESTTests.swift in Sources */,
+				F012EE9E1F9A5C7D001CDFA1 /* ApiConsume.swift in Sources */,
+				F012EEA11F9A5C7D001CDFA1 /* ApiConsumeExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +306,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F012EE8D1F9A5C5B001CDFA1 /* API_RESTUITests.swift in Sources */,
+				F012EE9F1F9A5C7D001CDFA1 /* ApiConsume.swift in Sources */,
+				F012EEA21F9A5C7D001CDFA1 /* ApiConsumeExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,8 +447,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 73A3QCVC2H;
 				INFOPLIST_FILE = API_REST/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.quimadevelopers.API-REST";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quimadevelopers.apiconsume;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -436,8 +461,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 73A3QCVC2H;
 				INFOPLIST_FILE = API_REST/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.quimadevelopers.API-REST";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quimadevelopers.apiconsume;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
