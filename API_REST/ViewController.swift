@@ -16,12 +16,49 @@ class ViewController: UIViewController {
         let notificationName = Notification.Name("endDocumentStatus")
         NotificationCenter.default.addObserver(self, selector: #selector(self.endDocumentStatus), name: notificationName, object: nil)
 
-        let params:Dictionary <String,String> = Dictionary()
+        let beneficiarios = [Dictionary<String, Any>]()
+        var bonoReconocimiento:Dictionary <String,Any> = Dictionary()
+        bonoReconocimiento["tipo"] = "2"
+        bonoReconocimiento["valorNominal"] = "0.0"
+
+        var fondoObligatorio:Dictionary <String,Any> = Dictionary()
+        fondoObligatorio["rentabilidad"] = "5.00"
+        fondoObligatorio["tipo"] = "2"
+        var fondoVoluntario:Dictionary <String,Any> = Dictionary()
+        fondoVoluntario["rentabilidad"] = "5.00"
+        fondoVoluntario["tipo"] = "2"
+
+        var tasasInteresDict:Dictionary <String,Any> = Dictionary()
+        tasasInteresDict["moneda"] = "S"
+        tasasInteresDict["tipo"] = "AFP"
+        tasasInteresDict["valor"] = "3.19"
+        var tasasInteres = [Dictionary<String, Any>]()
+        tasasInteres.append(tasasInteresDict)
+
+        var params:Dictionary <String,Any> = Dictionary()
+        params["modalidadPension"] = "RP"
+        params["nombres"] = "ALLAN HLWHRTIV CHAVES"
+        params["nroMensualidades"] = "12"
+        params["nroRemuneraciones"] = "12"
+        params["pctContribucionObl"] = "10"
+        params["promedioRemuneraciones"] = "1584.01"
+        params["remuneracionActual"] = "400.0"
+        params["saldoAfecto"] = "0.0"
+        params["saldoNoAfecto"] = "178.18"
+        params["saldoVoluntario"] = "0.0"
+        params["sexo"] = "M"
+
+        params["beneficiarios"] = beneficiarios
+        params["bonoReconocimiento"] = bonoReconocimiento
+        params["fondoObligatorio"] = fondoObligatorio
+        params["fondoVoluntario"] = fondoVoluntario
+        params["tasasInteres"] = tasasInteres
 
         var headers:Dictionary <String,String> = Dictionary()
         headers["Content-Type"] = "application/json"
-
-        ApiConsume.sharedInstance.consumeDataWithNewSession(url: "EstimadorREST/estimadorPension/service/v1.3", path: Constants.API_URL, headers: headers, params: params, typeParams: TypeParam.noParams, httpMethod: HTTP_METHOD.GET, notificationName: "endDocumentStatus")
+        let jsonData = try? JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+        print("\(String(describing: jsonData))")
+        ApiConsume.sharedInstance.consumeDataWithNewSession(url: "EstimadorREST/estimadorPension/service/v1.3", path: Constants.API_URL, headers: headers, params: params , typeParams: TypeParam.noParams, httpMethod: HTTP_METHOD.POST, notificationName: "endDocumentStatus")
 
 
     }
@@ -35,7 +72,9 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    /*
+{"beneficiarios":[],"bonoReconocimiento":{"tipo":"92","valorNominal":"0.0"},"esquemaComision":"F","fechaNacimiento":"14/06/1982","fondoObligatorio":{"rentabilidad":"5.00","tipo":"2"},"fondoVoluntario":{"rentabilidad":"5.00","tipo":"2"},"modalidadPension":"RP","nombres":"ALLAN  HLWHRTIV CHAVES","nroMensualidades":"12","nroRemuneraciones":"12","pctContribucionObl":"10.0","promedioRemuneraciones":"1584.01","regularidadAportes":"60","remuneracionActual":"400.0","saldoAfecto":"0.0","saldoNoAfecto":"178.18","saldoVoluntario":"0.0","sexo":"M","tasasInteres":[{"moneda":"S","tipo":"AFP","valor":"3.19"}]}
+    */
 
 }
 

@@ -57,7 +57,7 @@ class ApiConsume: NSObject{
     
      @return post NSNotification with name and object.
      */
-    public func consumeDataWithNewSession(url:String, path:String, headers:Dictionary< String, String>,params:Dictionary< String, String>,typeParams:TypeParam,httpMethod:String,notificationName:String){
+    public func consumeDataWithNewSession(url:String, path:String, headers:Dictionary< String, String>,params:Dictionary< String, Any>,typeParams:TypeParam,httpMethod:String,notificationName:String){
         var urlWithPathString:String!
         var isJson:Bool = true
         switch typeParams {
@@ -101,8 +101,8 @@ class ApiConsume: NSObject{
                     NotificationCenter.default.post(name: notificationName, object: jsonResult)
 
                 } catch {
-                    
-                    print("JSON Processing Failed")
+                    let datastring = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+                    print("\(String(describing: datastring))")
                 }
 
             }else{
