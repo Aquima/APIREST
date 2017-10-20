@@ -47,6 +47,15 @@ class ViewController: UIViewController {
         params["saldoNoAfecto"] = "178.18"
         params["saldoVoluntario"] = "0.0"
         params["sexo"] = "M"
+        params["contribucionMensual"] = "500"
+        params["esquemaComision"] = "F"
+        params["fechaNacimiento"] = "14/06/1982"
+        params["modalidadPensionSubTipo"] = "MVC"
+        params["numeroCuenta"] = "4787"
+        params["regularidadAportes"] = "60"
+
+
+
 
         params["beneficiarios"] = beneficiarios
         params["bonoReconocimiento"] = bonoReconocimiento
