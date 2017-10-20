@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         headers["Content-Type"] = "application/json"
         let jsonData = try? JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
         print("\(String(describing: jsonData))")
-        ApiConsume.sharedInstance.consumeDataWithNewSession(url: "EstimadorREST/estimadorPension/service/v1.3", path: Constants.API_URL, headers: headers, params: params , typeParams: TypeParam.noParams, httpMethod: HTTP_METHOD.POST, notificationName: "endDocumentStatus")
+        ApiConsume.sharedInstance.consumeDataWithNewSession(url: "EstimadorREST/estimadorPension/service/v1.3", path: Constants.API_URL, headers: headers, params: params , typeParams: TypeParam.jsonBody, httpMethod: HTTP_METHOD.POST, notificationName: "endDocumentStatus")
 
 
     }

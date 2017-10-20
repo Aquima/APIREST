@@ -80,7 +80,8 @@ class ApiConsume: NSObject{
                 let jsonData = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
 
                 request.httpBody = jsonData
-
+                let datastring = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue)
+                print("\(String(describing: datastring))")
             } catch {
                 print(error.localizedDescription)
             }
